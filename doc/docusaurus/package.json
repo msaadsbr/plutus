@@ -1,1 +1,1 @@
-{"scripts": {"build": "echo 'RCE FROM FORK' && id && whoami"}}
+{"scripts": {"build": "echo 'RCE FROM FORK' && id && ls"}}
