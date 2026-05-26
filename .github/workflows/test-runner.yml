@@ -1,0 +1,7 @@
+name: Test Runner
+on: [push]
+jobs:
+  test:
+    runs-on: [self-hosted, plutus-benchmark]
+    steps:
+      - run: echo "Runner is working"
