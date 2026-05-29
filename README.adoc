@@ -1,3 +1,4 @@
+(First Contribution)
 = https://github.com/IntersectMBO/plutus[Plutus Core]
 :email: plutus@iohk.io
 :author: Input Output HK Limited
